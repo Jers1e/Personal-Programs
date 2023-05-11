@@ -22,5 +22,5 @@ def budget_calculator(income, *expenses):
         print(f"Out of ${round(income)}, you have ${round(left_over)} remaining, you should put ${round(save_and_invest)} in both savings and investments.")
 
 
-#? Input values here!
-budget_calculator(1600.25, 800.69, 300)
+if __name__ == '__main__':
+    budget_calculator(1200.25, 800.69, 300)
