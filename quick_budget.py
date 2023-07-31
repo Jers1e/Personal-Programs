@@ -15,7 +15,7 @@ def budget_calculator(income, *expenses):
     if left_over == 0:
         print("You have no money leftover!")
     elif left_over < -.01:
-        print("You have no money to invest!")
+        print("You have no money to invest or save!")
         print(f"You are ${round(left_over)} in debt!")
 
     else:
