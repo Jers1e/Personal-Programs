@@ -35,7 +35,6 @@ def calculator():
     print(f"Your housing cost is ${housing_costs} in total.")
     food_cost = parameter_list[5] * 4
     print(f"Your food costs are ${food_cost}.")
-    
     print(f"You previously put that you wanted to save {parameter_list[6]}% of your total pay.")
     savings_rate = float(parameter_list[6] / 100)
     savings_take_out = parameter_list[0] * savings_rate
@@ -47,16 +46,17 @@ def calculator():
     print(f"Savings taken out: ${savings_take_out}")
     tithe_y_n = input("Would you like to tithe for your church? (10%) Y/N ")
     tithe_y_n.upper
+
+    # Final leftover cost is decided based on tithing option
     if tithe_y_n == "Y":
         tithe_cost = parameter_list[0] * .10
         leftover = parameter_list[0] - housing_costs - food_cost - savings_take_out - tithe_cost
-        print(f"Your leftover money after all costs is: {leftover}.")
+        print(f"Your leftover money after all costs is: ${leftover}.")
     else:
         leftover = parameter_list[0] - housing_costs - food_cost - savings_take_out
-        print(f"Your leftover money after all costs is: ${leftover}.")
-        if leftover < 0:
-            print("Ouch. No money left.")
-
+        print(f"Your leftover money is: ${leftover}.")
+    if float(leftover) < 0.0:
+        print("Ouch. No money left.")
 
 
 #! Start of program==================================================================================
